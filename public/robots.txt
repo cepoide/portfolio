@@ -1,0 +1,8 @@
+# robots.txt para el portafolio de Marcos Arauz
+# Permite que todos los motores de búsqueda indexen el sitio completo
+
+User-agent: *
+Allow: /
+
+# Si en el futuro agregas un sitemap, descomenta la siguiente línea y reemplaza con tu dominio real:
+# Sitemap: https://tu-dominio.com/sitemap.xml

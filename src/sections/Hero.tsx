@@ -270,6 +270,7 @@ export default function Hero() {
 
               {/* Overlay (Top Layer): Solid off-white text, dynamically masked around mouse cursor to reveal gradient */}
               <motion.h1 
+                aria-hidden="true"
                 style={{ 
                   WebkitMaskImage: maskImageTemplate, 
                   maskImage: maskImageTemplate 
