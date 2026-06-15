@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion'
+import { motion, AnimatePresence, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -11,6 +11,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   const { theme, toggleTheme } = useTheme()
   const { language, setLanguage, t } = useLanguage()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   // Glow background coordinates tracking cursor for footer
   const footerMouseX1 = useMotionValue(300)
@@ -57,6 +58,16 @@ export default function MainLayout({ children }: MainLayoutProps) {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   useEffect(() => {
@@ -209,7 +220,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
       {/* Glassmorphic Navbar */}
       <header 
         className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
-          isScrolled 
+          isScrolled || isMenuOpen
             ? 'bg-bg-dark/80 backdrop-blur-md border-b border-tokyo-purple/10 shadow-lg shadow-black/15 py-1' 
             : 'bg-transparent border-b border-transparent py-3'
         }`}
@@ -284,9 +295,30 @@ export default function MainLayout({ children }: MainLayoutProps) {
                 )}
               </button>
 
+              {/* Hamburger Menu Toggle Button (mobile only) */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-full border border-tokyo-purple/20 bg-bg-deep/30 text-fg-light hover:border-tokyo-hot-pink/40 hover:text-tokyo-hot-pink transition-all duration-300 cursor-pointer shadow-md hover:scale-105 md:hidden flex items-center justify-center"
+                aria-label="Toggle Menu"
+                title="Toggle menu"
+              >
+                {isMenuOpen ? (
+                  // Close Icon (X)
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  // Hamburger Icon (3 bars)
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                )}
+              </button>
+
+              {/* "Hablemos" Button (desktop only) */}
               <a 
                 href="#contact" 
-                className="relative px-5 py-2 rounded-full overflow-hidden text-xs font-extrabold bg-tokyo-purple text-bg-deep transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(176,132,235,0.5)] cursor-pointer inline-flex items-center justify-center group"
+                className="relative px-5 py-2 rounded-full overflow-hidden text-xs font-extrabold bg-tokyo-purple text-bg-deep transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(176,132,235,0.5)] cursor-pointer hidden md:inline-flex items-center justify-center group"
               >
                 {/* Neon Spotlight Swipe Overlay */}
                 <span className="absolute inset-0 w-[200%] h-full tokyo-spotlight-swipe translate-x-[-70%] group-hover:translate-x-[70%] transition-transform duration-1000 ease-out" />
@@ -296,6 +328,66 @@ export default function MainLayout({ children }: MainLayoutProps) {
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: 'easeInOut' }}
+              className="md:hidden w-full overflow-hidden bg-bg-dark/95 backdrop-blur-md border-b border-tokyo-purple/20 shadow-lg shadow-black/30"
+            >
+              <div className="px-5 py-6 flex flex-col gap-4 text-base font-semibold text-fg-medium">
+                <a 
+                  href="#about" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="py-2 px-3 rounded-lg hover:bg-theme-accent-bg hover:text-theme-accent transition-all duration-200 flex items-center justify-between group"
+                >
+                  <span>{t('navAbout')}</span>
+                  <span className="text-xs text-theme-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </a>
+                <a 
+                  href="#projects" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="py-2 px-3 rounded-lg hover:bg-theme-accent-bg hover:text-theme-accent transition-all duration-200 flex items-center justify-between group"
+                >
+                  <span>{t('navProjects')}</span>
+                  <span className="text-xs text-theme-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </a>
+                <a 
+                  href="#faq" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="py-2 px-3 rounded-lg hover:bg-theme-accent-bg hover:text-theme-accent transition-all duration-200 flex items-center justify-between group"
+                >
+                  <span>{t('navFaq')}</span>
+                  <span className="text-xs text-theme-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="py-2 px-3 rounded-lg hover:bg-theme-accent-bg hover:text-theme-accent transition-all duration-200 flex items-center justify-between group"
+                >
+                  <span>{t('navContact')}</span>
+                  <span className="text-xs text-theme-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </a>
+                
+                {/* Mobile Call to Action "Hablemos" */}
+                <div className="pt-4 border-t border-tokyo-purple/10 flex justify-center">
+                  <a 
+                    href="#contact" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="relative w-full py-3 rounded-full overflow-hidden text-sm font-extrabold bg-tokyo-purple text-bg-deep text-center transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(176,132,235,0.5)] cursor-pointer group flex items-center justify-center"
+                  >
+                    <span className="absolute inset-0 w-[200%] h-full tokyo-spotlight-swipe translate-x-[-70%] group-hover:translate-x-[70%] transition-transform duration-1000 ease-out" />
+                    <span className="relative z-10">{t('navTalkButton')}</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Main Grid-aligned Container */}
