@@ -1,0 +1,280 @@
+
+
+export const translations = {
+  es: {
+    // Nav
+    navAbout: 'Sobre mí',
+    navProjects: 'Proyectos',
+    navExperience: 'Experiencia',
+    navContact: 'Contacto',
+    navTalkButton: 'Hablemos',
+    navFaq: 'FAQ',
+
+    // Hero
+    heroDescription: (
+      <>
+        <span className="text-tokyo-hot-pink font-semibold">Diseñador Multimedial</span> y <span className="text-tokyo-hot-pink font-semibold">Desarrollador Full Stack</span> especializado en sitios web <span className="text-tokyo-hot-pink font-semibold">mobile-first</span>, aplicaciones y <span className="text-tokyo-hot-pink font-semibold">experiencias digitales</span>. Amplio dominio de tecnologías <span className="text-tokyo-hot-pink font-semibold">frontend</span> y <span className="text-tokyo-hot-pink font-semibold">backend</span> para desarrollar soluciones completas y <span className="text-tokyo-hot-pink font-semibold">escalables</span>.
+      </>
+    ),
+    heroCVButton: 'Ver CV',
+
+    // Grid demo
+    demoTitle: 'Demostración del Sistema de Columnas',
+    demoSubtitle: 'Todo el contenido de abajo se alinea perfectamente a la cuadrícula de 12 columnas de Figma.',
+    demoCol: '1 Col',
+    demoCard1Title: 'Col-span 6 (Media pantalla)',
+    demoCard1Desc: 'Ocupa 6 columnas de la rejilla Figma. En dispositivos móviles se adapta automáticamente a pantalla completa para mantener la legibilidad.',
+    demoCard2Title: 'Col-span 6 (Media pantalla)',
+    demoCard2Desc: 'Perfecto para diseños simétricos de dos columnas, como descripciones al lado de imágenes, tarjetas de proyectos, etc.',
+    demoCard3Title: 'Col-span 4',
+    demoCard3Desc: 'Ocupa un tercio del espacio en escritorio. Muy útil para mostrar ventajas o habilidades técnicas en tres columnas.',
+    demoCard4Title: 'Col-span 4',
+    demoCard4Desc: 'Se alinea perfectamente con una separación constante de 20px (gap-5) manteniendo la coherencia visual de Figma.',
+    demoCard5Title: 'Col-span 4',
+    demoCard5Desc: 'Todas las columnas siguen el mismo grid y se estructuran de manera adaptable.',
+
+    // Tooltips & buttons
+    themeTooltipLight: 'Activar Modo Claro',
+    themeTooltipDark: 'Activar Modo Oscuro',
+    gridTooltipHide: 'Ocultar Guías de Figma',
+    gridTooltipShow: 'Mostrar Guías de Figma',
+    gridButtonHide: 'Ocultar Guías',
+    gridButtonShow: 'Guías Figma',
+
+    // Works Section
+    worksTitle: 'Mis Trabajos',
+    worksSubtitle: 'Una selección de mis proyectos destacados en desarrollo de software, diseño multimedial y videojuegos.',
+    filterAll: 'Todos',
+    filterWeb: 'Desarrollo Web',
+    filterApps: 'Aplicaciones',
+    filterDesign: 'Diseño Multimedial',
+    worksTech: 'Tecnologías',
+    worksModalClose: 'Cerrar',
+    worksViewGallery: 'Ver Galería',
+    worksCarouselImage: 'Imagen',
+    worksFeatured: 'Destacado',
+    worksDemoText: 'Ver Proyecto',
+    worksPrevImage: 'Imagen anterior',
+    worksNextImage: 'Imagen siguiente',
+
+    // Projects Detail Translation Keys
+    projPandaTitle: 'Panda View',
+    projPandaDesc: 'Panel de administración y estadísticas en tiempo real para bases de datos SQL de servidores de juego. Ofrece visualización interactiva de distribución de ítems, gráficos de razas, gestión de cuentas y control completo de inventario con interfaz premium.',
+    projLauncherTitle: 'MU Elisa Launcher',
+    projLauncherDesc: 'Lanzador de escritorio personalizado desarrollado con Tauri, diseñado para el cliente de juego MU Elisa. Realiza verificaciones y auto-actualizaciones automáticas de archivos de manera ultra-rápida y cuenta con integración de Discord Rich Presence.',
+    projElisaTitle: 'MU Elisa Website',
+    projElisaDesc: 'Portal web autogestionable completo para el servidor de juegos MU Elisa. Integra clasificaciones en tiempo real, registro seguro de cuentas, mercado web y panel de usuario con sistema de recompensas PCPoints.',
+    projMaharlikaTitle: 'Maharlika MU Portal',
+    projMaharlikaDesc: 'Sitio web clásico para servidor de juegos con panel interactivo, estadísticas dinámicas en vivo, mapas interactivos de la comunidad y un sistema de noticias responsive para mantener a los jugadores informados.',
+    projClassicTitle: 'MuPage Classic',
+    projClassicDesc: 'Landing page moderna y minimalista optimizada para la conversión y bienvenida de nuevos usuarios. Incluye tablas de clasificaciones responsivas y blog de noticias estructurado.',
+    projScassoTitle: 'Scasso MU Portal',
+    projScassoDesc: 'Portal de juego temático de fantasía oscura con panel de control de base de datos integrado, sistema de login de cuentas, clasificaciones de personajes, listas de clanes y cronogramas dinámicos de eventos del servidor.',
+    projDiabloTitle: 'Diablo II Retro Portal',
+    projDiabloDesc: 'Recreación histórica y nostálgica del sitio web oficial de Blizzard Diablo II del año 2000, preservando fielmente los marcos góticos de piedra y toda la iconografía clásica.',
+    projIn33rTitle: 'IN33R Web & Design',
+    projIn33rDesc: 'Sitio corporativo oficial para agencia de desarrollo web y diseño multimedia. Muestra un catálogo interactivo de servicios, portafolio de clientes y formulario de contacto optimizado.',
+    projBlackTitle: 'Black Mountain',
+    projBlackDesc: 'Landing page interactiva de fantasía oscura con tablas de estado de servidor en vivo y clasificaciones con diseño inmersivo inspirado en mundos medievales.',
+    seoTitle: 'Marcos Arauz',
+    seoDescription: 'Portfolio personal de Marcos Arauz. Desarrollador Web, especializado en frontend, backend y diseño multimedial.',
+    
+    // FAQ
+    faqTitle: 'Preguntas Frecuentes',
+    faqSubtitle: 'Respuestas a las dudas más comunes sobre mi forma de trabajar y servicios.',
+    faqQ1: '¿Qué servicios ofreces exactamente?',
+    faqA1: 'Ofrezco un servicio integral que combina diseño multimedial (identidad visual, diseño UX/UI, prototipado) y desarrollo de software full stack (sitios web responsive, paneles de administración, integraciones de bases de datos y aplicaciones de escritorio con tecnologías como Tauri y Electron). Además, realizo tareas de gestión y configuración de entornos (servidores VPS, cPanel, despliegue e instalación de CMS) y en el desarrollo, configuración y mantenimiento de servidores privados de videojuegos MMORPG (como Mu Online, World of Warcraft, Lineage II, Rakion, Habbo, entre otros).',
+    faqQ2: '¿Cómo se definen los tiempos y entregas de un proyecto?',
+    faqA2: 'Cada proyecto cuenta con una planificación inicial donde definimos hitos y fechas límite concretas. Trabajo con entregas organizadas y te mantendré informado de los avances mediante reuniones o reportes directos en cada etapa.',
+    faqQ3: '¿Qué tecnologías utilizas en tus desarrollos?',
+    faqA3: 'Me adapto a las necesidades del proyecto, pero mis herramientas principales son React, Next.js, TypeScript y Tailwind CSS en el frontend, y PHP (Laravel o nativo), Node.js, .NET y bases de datos SQL/MySQL en el backend, además de Figma y Adobe Creative Suite para el diseño.',
+    faqQ4: '¿Realizas desarrollos a medida o usas plantillas?',
+    faqA4: 'Todos mis desarrollos son 100% a medida y optimizados a nivel de rendimiento, estructura y SEO. No utilizo plantillas genéricas precargadas, lo que garantiza una web única, limpia, escalable y adaptada a tu marca.',
+
+    whyTitle: 'Por qué trabajar conmigo',
+    whyDesc: 'Trabajo con marcas, emprendimientos y proyectos digitales que buscan una presencia online moderna, funcional y bien construida. Como diseñador multimedial y desarrollador full stack freelance, combino criterio visual, desarrollo técnico y comunicación directa para crear soluciones claras, escalables y alineadas con cada objetivo.',
+    whyCard1Title: 'Entrega organizada',
+    whyCard1Desc: 'Respeto los tiempos acordados y trabajo con una planificación clara desde el inicio. Durante el proceso mantengo una comunicación directa para que siempre sepas en qué etapa está el proyecto y qué se está desarrollando.',
+    whyCard2Title: 'Tecnologías modernas',
+    whyCard2Desc: 'Desarrollo sitios web y aplicaciones utilizando tecnologías actuales como React, Next.js, JavaScript, TypeScript, PHP, ASP.NET, SQL y MySQL, priorizando rendimiento, mantenimiento y escalabilidad.',
+    whyCard3Title: 'Presupuestos claros',
+    whyCard3Desc: 'Cada proyecto se cotiza de forma transparente según sus necesidades. Sin costos ocultos ni cambios inesperados: desde el comienzo vas a saber qué incluye el trabajo, cuánto cuesta y cuáles son los tiempos estimados.',
+    contactTitle: '¿Cómo te puedo ayudar?',
+    contactSubtitle: 'Me encantaría saber más sobre tu proyecto o emprendimiento.',
+    contactLabelName: 'Tu Nombre Completo *',
+    contactPlaceName: 'Juan Pérez *',
+    contactLabelEmail: 'Correo Electrónico *',
+    contactPlaceEmail: 'correo@ejemplo.com *',
+    contactLabelPhone: 'Número de Teléfono',
+    contactPlacePhone: '+54 9 11 0000-0000',
+    contactLabelDetails: 'Detalles del Proyecto *',
+    contactPlaceDetails: 'Cuéntame sobre tu proyecto...',
+    contactSubmit: 'Enviar',
+    contactReachOut: 'O contáctame directamente',
+    contactQuote: '“La innovación es lo que distingue a un líder de un seguidor.”',
+    contactRole: 'Marcos Arauz - Desarrollador & Diseñador',
+    contactExp: 'Diseño & Desarrollo Freelance',
+
+    // Footer
+    footerDesc: 'Diseño y desarrollo web premium. Creando experiencias digitales funcionales y modernas.',
+    footerNavTitle: 'Navegación',
+    footerConnectTitle: 'Redes y Contacto',
+    footerCopyright: 'Marcos. Todos los derechos reservados.',
+
+    // About Me
+    aboutTitle: 'Sobre Mí',
+    aboutSubtitle: 'Conoce más sobre mi trayectoria, mi filosofía de trabajo y quién soy.',
+    aboutStoryTitle: 'Mi Historia',
+    aboutStoryP1: 'Soy diseñador multimedial y desarrollador full stack, con una formación que combina tecnología, diseño, creatividad y experiencia práctica en proyectos digitales reales.',
+    aboutStoryP2: 'Mi interés por la programación comenzó mucho antes de mi formación universitaria. Desde chico fui autodidacta y entusiasta del mundo digital, creando mis primeras páginas en HTML y explorando cómo funcionaban los sitios web, los videojuegos y las comunidades online. Ese interés me llevó a investigar, experimentar y aprender por mi cuenta, especialmente dentro del universo de los videojuegos y la creación de mundos inmersivos de rol.',
+    aboutStoryP3: 'Más adelante estudié durante tres años Informática en la Universidad Nacional de La Plata, donde fortalecí mis bases técnicas y adquirí una mirada más estructurada sobre la programación, las bases de datos, la lógica de sistemas y el desarrollo de software. Esa etapa me permitió transformar una pasión autodidacta en conocimientos más sólidos y aplicables a proyectos de mayor escala.',
+    aboutStoryP4: 'Actualmente curso la Licenciatura en Diseño Multimedial en la Facultad de Artes de la Universidad Nacional de La Plata, una formación que amplió mi perspectiva hacia el diseño visual, la experiencia de usuario, la comunicación, el arte y la construcción de experiencias digitales. Gracias a este recorrido, puedo unir el pensamiento técnico con una mirada estética y funcional, creando productos que no solo funcionen bien, sino que también transmitan identidad, claridad y emoción.',
+    aboutStoryP5: 'A lo largo de los años he trabajado en múltiples áreas: diseño UX/UI, maquetación web, desarrollo frontend y backend, configuración de infraestructura en la nube, gestión de bases de datos y creación de servidores de videojuegos multijugador. Esta experiencia me dio una comprensión integral de los proyectos digitales, desde la idea inicial hasta su puesta en marcha, mantenimiento y optimización.',
+    aboutStoryP6: 'Mi objetivo es desarrollar soluciones limpias, modernas y a medida, acompañando al cliente durante todo el proceso. Busco que cada proyecto tenga una identidad propia, una experiencia cuidada y una base técnica sólida, donde cada decisión de diseño y cada línea de código aporten valor real.',
+    aboutSkillsTitle: 'Áreas de Especialización',
+    aboutSkill1: 'Diseño UX/UI y Multimedia',
+    aboutSkill2: 'Desarrollo Frontend',
+    aboutSkill3: 'Desarrollo Backend y DB',
+    aboutSkill4: 'Servidores y Videojuegos',
+    aboutBackBtn: 'Volver al Inicio'
+  },
+  en: {
+    // Nav
+    navAbout: 'About me',
+    navProjects: 'Projects',
+    navExperience: 'Experience',
+    navContact: 'Contact',
+    navTalkButton: "Let's Talk",
+    navFaq: 'FAQ',
+
+    // Hero
+    heroDescription: (
+      <>
+        <span className="text-tokyo-hot-pink font-semibold">Multimedia Designer</span> & <span className="text-tokyo-hot-pink font-semibold">Full Stack Developer</span> specializing in <span className="text-tokyo-hot-pink font-semibold">mobile-first</span> websites, applications, and <span className="text-tokyo-hot-pink font-semibold">digital experiences</span>. Extensive command of <span className="text-tokyo-hot-pink font-semibold">frontend</span> and <span className="text-tokyo-hot-pink font-semibold">backend</span> technologies to build complete and <span className="text-tokyo-hot-pink font-semibold">scalable</span> solutions.
+      </>
+    ),
+    heroCVButton: 'View CV',
+
+    // Grid demo
+    demoTitle: 'Column System Demonstration',
+    demoSubtitle: "All the content below aligns perfectly to Figma's 12-column grid.",
+    demoCol: '1 Col',
+    demoCard1Title: 'Col-span 6 (Half screen)',
+    demoCard1Desc: 'Occupies 6 columns of the Figma grid. On mobile devices, it automatically adapts to full screen to maintain readability.',
+    demoCard2Title: 'Col-span 6 (Half screen)',
+    demoCard2Desc: 'Perfect for symmetrical two-column layouts, such as descriptions alongside images, project cards, etc.',
+    demoCard3Title: 'Col-span 4',
+    demoCard3Desc: 'Occupies one third of the screen on desktop. Very useful for showcasing advantages or technical skills in three columns.',
+    demoCard4Title: 'Col-span 4',
+    demoCard4Desc: 'Aligns perfectly with a constant separation of 20px (gap-5) maintaining Figma\'s visual coherence.',
+    demoCard5Title: 'Col-span 4',
+    demoCard5Desc: 'All columns follow the same grid and are structured in an adaptable way.',
+
+    // Tooltips & buttons
+    themeTooltipLight: 'Activate Light Mode',
+    themeTooltipDark: 'Activate Dark Mode',
+    gridTooltipHide: 'Hide Figma Guides',
+    gridTooltipShow: 'Show Figma Guides',
+    gridButtonHide: 'Hide Guides',
+    gridButtonShow: 'Figma Guides',
+
+    // Works Section
+    worksTitle: 'My Works',
+    worksSubtitle: 'A selection of my featured projects in software development, multimedia design, and gaming.',
+    filterAll: 'All',
+    filterWeb: 'Web Development',
+    filterApps: 'Desktop Apps',
+    filterDesign: 'Multimedia Design',
+    worksTech: 'Technologies',
+    worksModalClose: 'Close',
+    worksViewGallery: 'View Gallery',
+    worksCarouselImage: 'Image',
+    worksFeatured: 'Featured',
+    worksDemoText: 'View Project',
+    worksPrevImage: 'Previous image',
+    worksNextImage: 'Next image',
+
+    // Projects Detail Translation Keys
+    projPandaTitle: 'Panda View',
+    projPandaDesc: 'Real-time administration dashboard and statistics panel for game server SQL databases. Provides interactive item distribution views, race statistics charts, account administration, and direct inventory edits via a premium interface.',
+    projLauncherTitle: 'MU Elisa Launcher',
+    projLauncherDesc: 'Custom desktop game launcher built using Tauri for the MU Elisa game client. Executes ultra-fast client file checks and automated file synchronizations, fully integrated with Discord Rich Presence status.',
+    projElisaTitle: 'MU Elisa Website',
+    projElisaDesc: 'Complete self-managed portal for the MU Elisa game server. Features real-time player rankings, secure account creation, web marketplace, and user dashboard integrated with PCPoints rewards.',
+    projMaharlikaTitle: 'Maharlika MU Portal',
+    projMaharlikaDesc: 'Classic gaming server portal featuring an interactive dashboard, live game statistics, interactive community region maps, and responsive news system to keep players connected.',
+    projClassicTitle: 'MuPage Classic',
+    projClassicDesc: 'Modern and minimal landing page optimized for high player conversion and new user onboarding. Includes responsive ranking lists and structured news tables.',
+    projScassoTitle: 'Scasso MU Portal',
+    projScassoDesc: 'Dark fantasy gaming portal with integrated database control panels, secure user login systems, character leaderboards, clan listings, and dynamic server event schedules.',
+    projDiabloTitle: 'Diablo II Retro Portal',
+    projDiabloDesc: 'Historical and nostalgic recreation of Blizzard\'s official Diablo II website from 2000, faithfully preserving the gothic stone borders and classical game asset layouts.',
+    projIn33rTitle: 'IN33R Web & Design',
+    projIn33rDesc: 'Official corporate landing page for a web development and multimedia design agency. Showcases an interactive services catalog, client portfolio, and contact funnel.',
+    projBlackTitle: 'Black Mountain',
+    projBlackDesc: 'Interactive dark fantasy landing page featuring live server status tables and player leaderboards in an immersive theme inspired by medieval worlds.',
+    seoTitle: 'Marcos Arauz',
+    seoDescription: 'Personal portfolio of Marcos Arauz. Web Developer, specialized in frontend, backend, and multimedia design.',
+    
+    // FAQ
+    faqTitle: 'Frequently Asked Questions',
+    faqSubtitle: 'Answers to the most common questions about my workflow and services.',
+    faqQ1: 'What services do you offer exactly?',
+    faqA1: 'I offer an integrated service combining multimedia design (visual identity, UX/UI design, prototyping) and full-stack software development (responsive websites, admin dashboards, database integrations, and desktop apps using Tauri/Electron). Additionally, I handle environment configuration and management (VPS servers, cPanel setup, CMS installations) as well as the development, setup, and maintenance of MMORPG private game servers (such as Mu Online, World of Warcraft, Lineage II, Rakion, Habbo, and more).',
+    faqQ2: 'How are project timelines and deliveries defined?',
+    faqA2: 'Each project starts with a detailed planning phase where we define milestones and specific deadlines. I work with organized deliveries and keep you informed of the progress through direct meetings or reports at each stage.',
+    faqQ3: 'What technologies do you use in your developments?',
+    faqA3: 'I adapt to the needs of each project, but my main tools are React, Next.js, TypeScript, and Tailwind CSS for the frontend, and PHP, Node.js, .NET, and SQL/MySQL databases for the backend, alongside Figma and Adobe Creative Suite for design.',
+    faqQ4: 'Do you build custom solutions or use pre-made templates?',
+    faqA4: 'All my developments are 100% custom-built and optimized for performance, code structure, and SEO. I do not use pre-loaded generic templates, which guarantees a unique, clean, scalable site tailored to your brand.',
+
+    whyTitle: 'Why Work With Me',
+    whyDesc: 'I work with brands, startups, and digital projects seeking a modern, functional, and well-built online presence. As a freelance multimedia designer and full stack developer, I combine visual judgment, technical development, and direct communication to create clear, scalable solutions aligned with each objective.',
+    whyCard1Title: 'Organized Delivery',
+    whyCard1Desc: 'I respect agreed deadlines and work with a clear plan from the start. Throughout the process, I maintain direct communication so you always know what stage the project is in and what is being developed.',
+    whyCard2Title: 'Modern Technologies',
+    whyCard2Desc: 'I develop websites and applications using current technologies like React, Next.js, JavaScript, TypeScript, PHP, ASP.NET, SQL, and MySQL, prioritizing performance, maintainability, and scalability.',
+    whyCard3Title: 'Clear Budgets',
+    whyCard3Desc: 'Each project is transparently priced according to its needs. No hidden costs or unexpected changes: from the beginning you will know what the work includes, how much it costs, and what the estimated timelines are.',
+    contactTitle: 'How can I help you?',
+    contactSubtitle: 'I would love to hear more about your project or business.',
+    contactLabelName: 'Your Full Name *',
+    contactPlaceName: 'John Smith *',
+    contactLabelEmail: 'Email Address *',
+    contactPlaceEmail: 'mail@example.com *',
+    contactLabelPhone: 'Phone Number',
+    contactPlacePhone: '+1 (555) 000-0000',
+    contactLabelDetails: 'Project Details *',
+    contactPlaceDetails: 'Tell me about your project...',
+    contactSubmit: 'Submit',
+    contactReachOut: 'Or reach out directly',
+    contactQuote: '“Innovation distinguishes between a leader and a follower.”',
+    contactRole: 'Marcos Arauz - Developer & Designer',
+    contactExp: 'Freelance Design & Development',
+
+    // Footer
+    footerDesc: 'Premium web design & development. Crafting functional and modern digital experiences.',
+    footerNavTitle: 'Navigation',
+    footerConnectTitle: 'Social & Contact',
+    footerCopyright: 'Marcos. All rights reserved.',
+
+    // About Me
+    aboutTitle: 'About Me',
+    aboutSubtitle: 'Learn more about my background, work philosophy, and who I am.',
+    aboutStoryTitle: 'My Story',
+    aboutStoryP1: 'I am a multimedia designer and full stack developer, with a background that combines technology, design, creativity, and hands-on experience in real-world digital projects.',
+    aboutStoryP2: 'My interest in programming started long before my university education. From a young age, I was self-taught and enthusiastic about the digital world, creating my first HTML pages and exploring how websites, video games, and online communities worked. This curiosity drove me to research, experiment, and learn on my own, especially within the gaming universe and the creation of immersive role-playing worlds.',
+    aboutStoryP3: 'Later, I studied Computer Science for three years at the National University of La Plata, where I strengthened my technical foundation and gained a more structured perspective on programming, databases, systems logic, and software development. This stage allowed me to transform my self-taught passion into more solid, applicable knowledge for larger-scale projects.',
+    aboutStoryP4: 'Currently, I am pursuing a Bachelor\'s Degree in Multimedia Design at the Faculty of Arts of the National University of La Plata. This education has broadened my perspective toward visual design, user experience, communication, art, and the construction of digital experiences. Thanks to this journey, I am able to combine technical thinking with an aesthetic and functional approach, creating products that not only work well but also convey identity, clarity, and emotion.',
+    aboutStoryP5: 'Over the years, I have worked in multiple fields: UX/UI design, web layout, frontend and backend development, cloud infrastructure configuration, database management, and multiplayer game server setup. This experience has given me an end-to-end understanding of digital projects, from the initial concept to deployment, maintenance, and optimization.',
+    aboutStoryP6: 'My goal is to develop clean, modern, and customized solutions, accompanying clients throughout the entire process. I aim for each project to have its own unique identity, a polished user experience, and a robust technical foundation, where every design decision and line of code delivers real value.',
+    aboutSkillsTitle: 'Areas of Expertise',
+    aboutSkill1: 'UX/UI & Multimedia Design',
+    aboutSkill2: 'Frontend Development',
+    aboutSkill3: 'Backend & DB Development',
+    aboutSkill4: 'Servers & Game Development',
+    aboutBackBtn: 'Back to Home'
+  }
+} as const
+
+export type TranslationKey = keyof typeof translations.es

@@ -1,0 +1,380 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core Backgrounds */
+  --color-bg-dark: var(--bg-dark);
+  --color-bg-deep: var(--bg-deep);
+
+  /* Core Text Foregrounds */
+  --color-fg-light: var(--fg-light);
+  --color-fg-medium: var(--fg-medium);
+  --color-fg-comment: var(--fg-comment);
+
+  /* Tokyo Panda Token Accents */
+  --color-tokyo-pink: var(--tokyo-pink);
+  --color-tokyo-teal: var(--tokyo-teal);
+  --color-tokyo-blue: var(--tokyo-blue);
+  --color-tokyo-purple: var(--tokyo-purple);
+  --color-tokyo-orange: var(--tokyo-orange);
+  --color-tokyo-yellow: var(--tokyo-yellow);
+  --color-tokyo-rose: var(--tokyo-rose);
+  --color-tokyo-light-pink: var(--tokyo-light-pink);
+  --color-tokyo-offwhite: var(--tokyo-offwhite);
+  --color-tokyo-hot-pink: var(--tokyo-hot-pink);
+
+  /* Themed Action Buttons */
+  --color-btn-demo-bg: var(--btn-demo-bg);
+  --color-btn-demo-border: var(--btn-demo-border);
+  --color-btn-demo-text: var(--btn-demo-text);
+  --color-btn-demo-hover-bg: var(--btn-demo-hover-bg);
+  --color-btn-demo-hover-border: var(--btn-demo-hover-border);
+  --color-btn-demo-hover-text: var(--btn-demo-hover-text);
+
+  --color-btn-git-bg: var(--btn-git-bg);
+  --color-btn-git-border: var(--btn-git-border);
+  --color-btn-git-text: var(--btn-git-text);
+  --color-btn-git-hover-bg: var(--btn-git-hover-bg);
+  --color-btn-git-hover-border: var(--btn-git-hover-border);
+  --color-btn-git-hover-text: var(--btn-git-hover-text);
+
+  /* Ambient Glows & Hero Background Gradients */
+  --color-glow-teal: var(--glow-teal);
+  --color-glow-pink: var(--glow-pink);
+  --color-hero-grad-start: var(--hero-grad-start);
+  --color-hero-grad-via: var(--hero-grad-via);
+  --color-hero-grad-end: var(--hero-grad-end);
+
+  /* Theme-aware accent highlights */
+  --color-theme-accent: var(--theme-accent);
+  --color-theme-accent-bg: var(--theme-accent-bg);
+  --color-theme-accent-border: var(--theme-accent-border);
+
+  /* Theme-aware tech badges */
+  --color-theme-tech-bg: var(--theme-tech-bg);
+  --color-theme-tech-border: var(--theme-tech-border);
+  --color-theme-tech-text: var(--theme-tech-text);
+  --color-theme-tech-hover-bg: var(--theme-tech-hover-bg);
+  --color-theme-tech-hover-border: var(--theme-tech-hover-border);
+}
+
+:root {
+  /* Default: Dark Mode */
+  --bg-dark: #1a1b26;
+  --bg-deep: #16161e;
+
+  --fg-light: #E6E6E6;
+  --fg-medium: #a9b1d6;
+  --fg-comment: #676B79;
+
+  --tokyo-pink: #FF75B5;
+  --tokyo-teal: #19f9d8;
+  --tokyo-blue: #6FC1FF;
+  --tokyo-purple: #B084EB;
+  --tokyo-orange: #FFB86C;
+  --tokyo-yellow: #FFCC95;
+  --tokyo-rose: #FF2C6D;
+  --tokyo-light-pink: #FF9AC1;
+  --tokyo-offwhite: #E6E6E6;
+  --tokyo-hot-pink: #ff3bbe;
+
+  /* Button variables - Dark Mode values (Pink Demo, Teal Git) */
+  --btn-demo-bg: rgba(255, 59, 190, 0.08);
+  --btn-demo-border: rgba(255, 59, 190, 0.20);
+  --btn-demo-text: var(--tokyo-hot-pink);
+  --btn-demo-hover-bg: rgba(255, 59, 190, 0.20);
+  --btn-demo-hover-border: rgba(255, 59, 190, 0.45);
+  --btn-demo-hover-text: var(--tokyo-hot-pink);
+
+  --btn-git-bg: rgba(25, 249, 216, 0.08);
+  --btn-git-border: rgba(25, 249, 216, 0.20);
+  --btn-git-text: var(--tokyo-teal);
+  --btn-git-hover-bg: rgba(25, 249, 216, 0.20);
+  --btn-git-hover-border: rgba(25, 249, 216, 0.45);
+  --btn-git-hover-text: var(--tokyo-teal);
+
+  /* Subtle dark mode glows and gradients */
+  --glow-teal: rgba(25, 249, 216, 0.10);
+  --glow-pink: rgba(255, 117, 181, 0.10);
+  --hero-grad-start: rgba(22, 22, 30, 0.2);
+  --hero-grad-via: rgba(26, 27, 38, 0.4);
+  --hero-grad-end: rgba(176, 132, 235, 0.05);
+
+  --dot-color: rgba(176, 132, 235, 0.08);
+  --dot-opacity: 0.45;
+
+  /* Accent & Highlight Colors - Dark Mode values (Pink/Hot Pink highlights) */
+  --theme-accent: var(--tokyo-hot-pink);
+  --theme-accent-bg: rgba(255, 59, 190, 0.08);
+  --theme-accent-border: rgba(255, 59, 190, 0.20);
+  --theme-accent-shadow: rgba(255, 59, 190, 0.15);
+
+  /* Tech Badges Colors - Dark Mode values (Teal highlights) */
+  --theme-tech-bg: rgba(25, 249, 216, 0.08);
+  --theme-tech-border: rgba(25, 249, 216, 0.20);
+  --theme-tech-text: var(--tokyo-teal);
+  --theme-tech-hover-bg: rgba(25, 249, 216, 0.20);
+  --theme-tech-hover-border: rgba(25, 249, 216, 0.40);
+
+  /* Text Drop Shadows & Text Shadows */
+  --title-drop-shadow: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.75)) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+  --desc-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.light {
+  /* Overrides: Light Mode */
+  --bg-dark: #f0f2f5;        /* Soft grey-blue background */
+  --bg-deep: #ffffff;        /* Pure white for panels/cards */
+
+  --fg-light: #16161e;       /* Very dark prominent text */
+  --fg-medium: #3b4252;      /* Medium dark description text */
+  --fg-comment: #5c6370;     /* Muted gray for comments */
+
+  --tokyo-pink: #e04a8b;     /* High contrast pink */
+  --tokyo-teal: #009980;     /* High contrast teal */
+  --tokyo-blue: #007acc;     /* High contrast function blue */
+  --tokyo-purple: #B084EB;   /* High contrast purple */
+  --tokyo-orange: #cc6a00;   /* High contrast orange */
+  --tokyo-yellow: #997300;   /* High contrast yellow */
+  --tokyo-rose: #d61a52;     /* High contrast rose */
+  --tokyo-light-pink: #e67ba7;
+  --tokyo-offwhite: #2e303f;
+  --tokyo-hot-pink: #cc1b8c;
+
+  /* Button variables - Light Mode overrides (Violet for Demo, Teal for Git) */
+  --btn-demo-bg: rgba(176, 132, 235, 0.06);
+  --btn-demo-border: rgba(176, 132, 235, 0.25);
+  --btn-demo-text: var(--tokyo-purple);
+  --btn-demo-hover-bg: var(--tokyo-purple);
+  --btn-demo-hover-border: var(--tokyo-purple);
+  --btn-demo-hover-text: #ffffff;
+
+  --btn-git-bg: rgba(0, 153, 128, 0.06);
+  --btn-git-border: rgba(0, 153, 128, 0.25);
+  --btn-git-text: var(--tokyo-teal);
+  --btn-git-hover-bg: var(--tokyo-teal);
+  --btn-git-hover-border: var(--tokyo-teal);
+  --btn-git-hover-text: #ffffff;
+
+  /* Accent & Highlight Colors - Light Mode values (Violet/Purple highlights) */
+  --theme-accent: var(--tokyo-purple);
+  --theme-accent-bg: rgba(176, 132, 235, 0.08);
+  --theme-accent-border: rgba(176, 132, 235, 0.25);
+  --theme-accent-shadow: rgba(176, 132, 235, 0.15);
+
+  /* Tech Badges Colors - Light Mode values (Teal highlights) */
+  --theme-tech-bg: rgba(0, 153, 128, 0.06);
+  --theme-tech-border: rgba(0, 153, 128, 0.25);
+  --theme-tech-text: var(--tokyo-teal);
+  --theme-tech-hover-bg: rgba(0, 153, 128, 0.15);
+  --theme-tech-hover-border: rgba(0, 153, 128, 0.40);
+
+  /* Stronger light mode glows and gradients for high visibility */
+  --glow-teal: rgba(0, 153, 128, 0.20);
+  --glow-pink: rgba(224, 74, 139, 0.20);
+  --hero-grad-start: rgba(255, 255, 255, 0.4);
+  --hero-grad-via: rgba(240, 242, 245, 0.6);
+  --hero-grad-end: rgba(176, 132, 235, 0.12);
+
+  --dot-color: rgba(176, 132, 235, 0.14);
+  --dot-opacity: 0.4;
+
+  /* High contrast text shadows for light mode */
+  --title-drop-shadow: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.16)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
+  --desc-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Smooth color transitions for dynamic theme toggling */
+html, body, header, footer, button, a, div {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Reusable Tokyo Panda Dotted Grid Overlay */
+.tokyo-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--dot-color) 0%, transparent 8px);
+  background-size: 40px 40px;
+  opacity: var(--dot-opacity);
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 75%);
+  mask-image: linear-gradient(to bottom, black 20%, transparent 75%);
+  z-index: 1;
+}
+
+/* Drop Shadow Filters for Hero Typography */
+.tokyo-title-shadow {
+  filter: var(--title-drop-shadow);
+}
+
+.tokyo-desc-shadow {
+  text-shadow: var(--desc-text-shadow);
+}
+
+.tokyo-active-filter {
+  box-shadow: 0 0 8px var(--theme-accent-shadow);
+}
+
+/* Infinite Marquee Scroll Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left-fast {
+  animation: scroll-left 250s linear infinite;
+}
+
+.animate-scroll-left-desktop {
+  @media (min-width: 640px) {
+    animation: scroll-left 500s linear infinite;
+  }
+}
+
+.animate-scroll-right-fast {
+  animation: scroll-right 250s linear infinite;
+}
+
+.animate-scroll-right-desktop {
+  @media (min-width: 640px) {
+    animation: scroll-right 500s linear infinite;
+  }
+}
+
+/* Tech Ticker Edge Fade Mask */
+.tokyo-ticker-fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Neon Spotlight Swipe Utility */
+.tokyo-spotlight-swipe {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3) 35%,
+    rgba(25, 249, 216, 0.45) 50%,
+    rgba(255, 59, 190, 0.45) 65%,
+    transparent
+  );
+}
+
+/* Custom Scrollbar Styles (Theme-Aware & Neon) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--tokyo-purple) var(--bg-deep);
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+  border-left: 1px solid color-mix(in srgb, var(--tokyo-purple) 15%, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--tokyo-purple), var(--tokyo-hot-pink));
+  border-radius: 9999px;
+  border: 3px solid var(--bg-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tokyo-purple) 45%, transparent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--tokyo-hot-pink), var(--tokyo-teal));
+  border: 2px solid var(--bg-deep);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tokyo-teal) 60%, transparent);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(to bottom, var(--tokyo-teal), var(--tokyo-purple));
+  border: 1.5px solid var(--bg-deep);
+}
+
+/* Tokyo Panda Spotlight Card Hover Borders and Background Glows */
+.tokyo-spotlight-card {
+  position: relative;
+  background: color-mix(in srgb, var(--tokyo-purple) 12%, transparent);
+  border-radius: 1rem; /* rounded-2xl */
+  padding: 1.5px; /* Border thickness */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tokyo-spotlight-card:hover {
+  background: color-mix(in srgb, var(--tokyo-purple) 25%, transparent);
+  box-shadow: 0 0 25px color-mix(in srgb, var(--theme-accent) 15%, transparent);
+}
+
+.tokyo-spotlight-card::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: -160px;
+  top: -160px;
+  background: radial-gradient(circle, var(--theme-accent) 0%, transparent 70%);
+  border-radius: 9999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  transform: translate(var(--mouse-x, 0px), var(--mouse-y, 0px));
+  z-index: 1;
+  filter: blur(45px);
+}
+
+/* Subtle background overlay glow */
+.tokyo-spotlight-card::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  left: -190px;
+  top: -190px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--theme-accent) 30%, transparent) 0%, transparent 70%);
+  border-radius: 9999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  transform: translate(var(--mouse-x, 0px), var(--mouse-y, 0px));
+  z-index: 3;
+  filter: blur(55px);
+}
+
+.tokyo-spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.tokyo-spotlight-card:hover::after {
+  opacity: 0.12;
+}
+
+/* Light Mode Overrides */
+.light .tokyo-spotlight-card {
+  background: color-mix(in srgb, var(--tokyo-purple) 18%, transparent);
+}
+
+.light .tokyo-spotlight-card:hover {
+  background: color-mix(in srgb, var(--tokyo-purple) 30%, transparent);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--theme-accent) 12%, transparent);
+}
+
+.light .tokyo-spotlight-card:hover::after {
+  opacity: 0.08;
+}
