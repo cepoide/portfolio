@@ -15,8 +15,9 @@
 Este repositorio contiene mi portafolio personal interactivo, desarrollado como una aplicación web de una sola página (SPA) premium y de alto rendimiento.
 
 ### 🌟 Características Principales
-*   **Modo Oscuro & Claro:** Esquema de colores dinámico basado en la paleta inspirada en *Tokyo Night*, adaptando el contraste de texto y botones para máxima accesibilidad.
-*   **Internacionalización (i18n):** Traducción en tiempo real (Español / Inglés) implementada mediante un Contexto de React nativo (`LanguageContext`).
+
+- **Modo Oscuro & Claro:** Esquema de colores dinámico basado en la paleta inspirada en _Tokyo Night_, adaptando el contraste de texto y botones para máxima accesibilidad.
+- **Internacionalización (i18n):** Traducción en tiempo real (Español / Inglés) implementada mediante un Contexto de React nativo (`LanguageContext`).
 
 ---
 
@@ -24,13 +25,13 @@ Este repositorio contiene mi portafolio personal interactivo, desarrollado como 
 
 El sitio web está desarrollado con herramientas modernas optimizadas para una carga ultrarrápida y una experiencia interactiva fluida:
 
-| Componente | Tecnología | Propósito |
-| :--- | :--- | :--- |
-| **Núcleo** | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) | Creación de interfaces de usuario robustas con tipado estático seguro. |
-| **Compilador** | [Vite 8](https://vite.dev/) | Bundler ultrarrápido con soporte nativo de HMR (recarga en caliente). |
-| **Estilos** | [Tailwind CSS v4](https://tailwindcss.com/) | Utilidades CSS modernas aplicadas mediante `@theme` nativo en el archivo CSS. |
-| **Animaciones** | [Framer Motion](https://www.framer.com/motion/) | Transiciones fluidas de páginas, efectos de scroll y microinteracciones. |
-| **Iconos** | [FontAwesome](https://fontawesome.com/) | Repertorio completo de iconos vectoriales interactivos. |
+| Componente      | Tecnología                                                                     | Propósito                                                                     |
+| :-------------- | :----------------------------------------------------------------------------- | :---------------------------------------------------------------------------- |
+| **Núcleo**      | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) | Creación de interfaces de usuario robustas con tipado estático seguro.        |
+| **Compilador**  | [Vite 8](https://vite.dev/)                                                    | Bundler ultrarrápido con soporte nativo de HMR (recarga en caliente).         |
+| **Estilos**     | [Tailwind CSS v4](https://tailwindcss.com/)                                    | Utilidades CSS modernas aplicadas mediante `@theme` nativo en el archivo CSS. |
+| **Animaciones** | [Framer Motion](https://www.framer.com/motion/)                                | Transiciones fluidas de páginas, efectos de scroll y microinteracciones.      |
+| **Iconos**      | [FontAwesome](https://fontawesome.com/)                                        | Repertorio completo de iconos vectoriales interactivos.                       |
 
 ---
 
@@ -39,24 +40,30 @@ El sitio web está desarrollado con herramientas modernas optimizadas para una c
 Si deseas correr el portafolio de manera local, sigue los pasos a continuación:
 
 ### 1. Clonar el proyecto
+
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/cepoide/portfolio
 cd portfolio
 ```
 
 ### 2. Instalar dependencias
+
 ```bash
 npm install
 ```
 
 ### 3. Levantar servidor local
+
 ```bash
 npm run dev
 ```
+
 Accede a `http://localhost:5173` en tu navegador.
 
 ### 4. Compilar para producción
+
 ```bash
 npm run build
 ```
+
 La build optimizada se generará en la carpeta `/dist`.
